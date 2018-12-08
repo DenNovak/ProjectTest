@@ -1,29 +1,26 @@
+import Entity.*;
+import persistence.*;
 import org.hibernate.Session;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Start");
 
-        EntityManager entityManager = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
 
-        EntityManagerFactory entityManagerFactory = null;
+        session.beginTransaction();
 
-        entityManagerFactory = Persistence.createEntityManagerFactory("hibernate-dynamic");
-        //utworz entityManagera
-        entityManager = entityManagerFactory.createEntityManager();
+        Shop shop = new Shop();
 
-        //rozpocznij transakcje
-        entityManager.getTransaction().begin();
+        shop.setName("Molotok");
+        shop.setRoom_area(60);
+        shop.setShop_location("Something");
 
-        entityManager.getTransaction().commit();
+        session.save(shop);
 
+        session.getTransaction().commit();
         System.out.println("Done");
 
-        entityManager.close();
 
     }
 }
