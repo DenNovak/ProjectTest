@@ -13,7 +13,7 @@
         <property name="show_sql">true</property>
 
         <mapping resource="Shop.hbm.xml"/>
-        <!--<mapping resource="BeerType.hbm.xml"/>-->
+        <mapping resource="Stuff.hbm.xml"/>
         <!--<mapping resource="BeerTypeDescription.hbm.xml"/>-->
         <!--<mapping resource="BeerTypeHistory.xbm.xml"/>-->
         <!--<mapping resource="Manufacturer.xbm.xml"/>-->

@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="Entities" />
+          <factory-entry name="Entities" value="236d66b2-7080-4845-9001-37601be21cf6" />
           <factory-entry name="hibernate-dynamic" />
         </datasource-mapping>
         <naming-strategy-map />

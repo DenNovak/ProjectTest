@@ -18,6 +18,15 @@ public class Main {
 
         session.save(shop);
 
+        Stuff stuff = new Stuff();
+
+        stuff.setName("Andrew");
+        stuff.setSurname("Moskovets");
+        stuff.setSalary(1234);
+        stuff.setShop(shop);
+
+        session.save(stuff);
+
         session.getTransaction().commit();
         System.out.println("Done");
 
