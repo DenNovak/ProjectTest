@@ -14,9 +14,9 @@
 
         <mapping resource="Shop.hbm.xml"/>
         <mapping resource="Stuff.hbm.xml"/>
-        <!--<mapping resource="BeerTypeDescription.hbm.xml"/>-->
-        <!--<mapping resource="BeerTypeHistory.xbm.xml"/>-->
-        <!--<mapping resource="Manufacturer.xbm.xml"/>-->
-        <!--<mapping resource="Packaging.hbm.xml"/>-->
+        <mapping resource="TypeOfItem.hbm.xml"/>
+        <mapping resource="Item.hbm.xml"/>
+        <mapping resource="ItemLocation.hbm.xml"/>
+
     </session-factory>
 </hibernate-configuration>

@@ -27,6 +27,28 @@ public class Main {
 
         session.save(stuff);
 
+        TypeOfItem type = new TypeOfItem();
+        type.setName("Chainsaws");
+        type.setDescription("Things that help to cut trees");
+
+        session.save(type);
+
+        Item item = new Item();
+        item.setName("Husqvarna 280");
+        item.setPrice(5555);
+        item.setType(type);
+
+        session.save(item);
+
+        ItemLocation itemlocation = new ItemLocation();
+        itemlocation.setQuantity(5);
+        itemlocation.setItem(item);
+        itemlocation.setShop(shop);
+
+        session.save(itemlocation);
+
+
+
         session.getTransaction().commit();
         System.out.println("Done");
 

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="Entity.ItemLocation" table="item_location" catalog="ShopDB">
+
+        <id name="ID" type="java.lang.Integer">
+            <column name="ID" length="10"/>
+            <generator class="native" />
+        </id>
+
+        <property name="quantity" type="int">
+            <column name="QUANTITY" length="10" not-null="true"  />
+        </property>
+
+        <property name="item_id" type="int" insert="false" update="false">
+            <column name="ITEM_ID" length="10" not-null="true" unique="true" />
+        </property>
+
+        <property name="shop_id" type="int" insert="false" update="false">
+            <column name="SHOP_ID" length="10" not-null="true" unique="true" />
+        </property>
+
+        <many-to-one name="shop" class="Entity.Shop"
+                     column="SHOP_ID" not-null="true"
+        />
+
+        <many-to-one name="item" class="Entity.Item"
+                     column="ITEM_ID" not-null="true"
+        />
+
+
+    </class>
+
+</hibernate-mapping>

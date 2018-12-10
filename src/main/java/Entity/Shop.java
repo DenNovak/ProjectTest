@@ -1,15 +1,9 @@
 package Entity;
 
 public class Shop  {
-
     private Integer ID;
-
-//    private static final long serialVersionUID = 1L;
     private String name;
-
-
     private String shop_location;
-
     private Integer room_area;
 
     public Shop() {}
